@@ -56,13 +56,7 @@ export default {
                 { text: 'Salary', value: 'salary', sortable: false, width: '10%', align:'left'}
             ]
         }
-    },
-    methods: {
-      redirectToLink: function(item) {
-        window.open(item.link, '_blank');
-      }
     }
-
 }
 </script>
 
