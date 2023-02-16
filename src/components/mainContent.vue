@@ -16,6 +16,9 @@
     disable-pagination
     hide-default-footer
     dense>
+    <template v-slot:[`item.name`]="{ item }">
+      <a :href="item.link" class="links" target="_blank" rel="noopener noreferrer">{{ item.name }}</a>
+  </template>
   </v-data-table>
 </v-card>
 </template>
@@ -42,15 +45,21 @@ export default {
             headers: [
                 {
                   text: 'Job position',
-                  align: 'start',
+                  align: 'left',
                   sortable: true,
                   value: 'name',
                 },
-                { text: 'Company', value: 'company' },
-                { text: 'Salary', value: 'salary' }
+                { text: 'Company', value: 'company'},
+                { text: 'Salary', value: 'salary', sortable: false}
             ]
         }
+    },
+    methods: {
+      redirectToLink: function(item) {
+        window.open(item.link, '_blank');
+      }
     }
+
 }
 </script>
 
