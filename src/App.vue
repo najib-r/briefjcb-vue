@@ -1,8 +1,8 @@
 <template>
   <v-app>
-    <headerContent class="text-center mx-16 my-5"/>
+    <headerContent class="text-center mx-lg-16"/>
     <v-main>
-      <mainContent class="mx-16"/>
+      <mainContent class="mx-auto mb-5"/>
     </v-main>
   </v-app>
 </template>

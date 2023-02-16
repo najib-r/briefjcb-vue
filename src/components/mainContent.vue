@@ -1,5 +1,5 @@
 <template>
-<v-card>
+<v-card id="contentBox" fill-height>
   <v-card-title>
     <v-text-field
     v-model="search"
@@ -14,8 +14,12 @@
     :items="jobs"
     :search="search"
     disable-pagination
+    disable-sort
     hide-default-footer
-    dense>
+    mobile-breakpoint="0"
+    dense 
+    fixed-header
+    id="myTable">
     <template v-slot:[`item.name`]="{ item }">
       <a :href="item.link" class="links" target="_blank" rel="noopener noreferrer">{{ item.name }}</a>
   </template>
@@ -24,33 +28,32 @@
 </template>
 
 <script>
+
+let i = 1
+const jobs = []; 
+
+while (i < 76) {
+  let job = {name: `job ${i}`, company: `company ${i}`, salary: '$ salary', link:'https://google.com'}
+  jobs.push(job);
+  i++;
+}
+
 export default {
     name: 'mainContent',
     data () {
         return {
             search: '',
-            jobs: [
-                {name: 'job 1', company: 'company 1', salary: '$ salary', link: 'https://google.com'},
-                {name: 'job 2', company: 'company 2', salary: '$ salary', link: 'https://google.com'},
-                {name: 'job 3', company: 'company 3', salary: '$ salary', link: 'https://google.com'},
-                {name: 'job 4', company: 'company 4', salary: '$ salary', link: 'https://google.com'},
-                {name: 'job 5', company: 'company 5', salary: '$ salary', link: 'https://google.com'},
-                {name: 'job 6', company: 'company 6', salary: '$ salary', link: 'https://google.com'},
-                {name: 'job 7', company: 'company 7', salary: '$ salary', link: 'https://google.com'},
-                {name: 'job 8', company: 'company 8', salary: '$ salary', link: 'https://google.com'},
-                {name: 'job 9', company: 'company 9', salary: '$ salary', link: 'https://google.com'},
-                {name: 'job 10', company: 'company 10', salary: '$ salary', link: 'https://google.com'},
-                {name: 'job 11', company: 'company 11', salary: '$ salary', link: 'https://google.com'},
-            ],
+            jobs: jobs,
             headers: [
                 {
                   text: 'Job position',
                   align: 'left',
                   sortable: true,
                   value: 'name',
+                  width: '20%'
                 },
-                { text: 'Company', value: 'company'},
-                { text: 'Salary', value: 'salary', sortable: false}
+                { text: 'Company', value: 'company', width: '20%', align: 'left'},
+                { text: 'Salary', value: 'salary', sortable: false, width: '10%', align:'left'}
             ]
         }
     },
@@ -83,4 +86,15 @@ a:visited {
     width: 100%;
     height: 1.5em;
 }
+
+#contentBox {
+  width: 95%;
+}
+
+@media only screen and (min-width: 768px) {
+#contentBox {
+  width: 50%;
+}
+}
+
 </style>
