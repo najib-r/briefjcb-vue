@@ -1,6 +1,6 @@
 <template>
   <v-app>
-    <headerContent class="mx-lg-16 my-5 my-lg-10 px-5 pt-5"/>
+    <headerContent class="mx-lg-auto my-5 my-lg-10 px-5 pt-5"/>
     <v-main>
       <mainContent class="mx-auto mb-10"/>
     </v-main>

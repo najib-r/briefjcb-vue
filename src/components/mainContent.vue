@@ -82,6 +82,7 @@ a:visited {
 
 #contentBox {
   width: 95%;
+  max-width: 900px;
 }
 
 @media only screen and (min-width: 768px) {
