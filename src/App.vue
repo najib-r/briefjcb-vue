@@ -8,8 +8,8 @@
 </template>
 
 <script>
-import headerContent from './components/headerContent.vue';
-import mainContent from './components/mainContent.vue';
+import headerContent from '@/components/headerContent.vue';
+import mainContent from '@/components/mainContent.vue';
 
 export default {
   name: 'App',
