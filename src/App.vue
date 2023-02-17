@@ -24,3 +24,13 @@ export default {
   }),
 };
 </script>
+
+<style>
+.v-data-table > .v-data-table__wrapper > table > thead > tr > th {
+   font-size: 1rem !important;
+}
+
+.v-data-table > .v-data-table__wrapper > table > tbody > tr > td {
+   font-size: 0.75rem !important;
+}
+</style>

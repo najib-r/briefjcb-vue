@@ -18,11 +18,10 @@
     hide-default-footer
     mobile-breakpoint="0"
     dense 
-    fixed-header
     id="myTable">
     <template v-slot:[`item.name`]="{ item }">
       <a :href="item.link" class="links" target="_blank" rel="noopener noreferrer">{{ item.name }}</a>
-  </template>
+    </template>
   </v-data-table>
 </v-card>
 </template>
@@ -90,5 +89,4 @@ a:visited {
   width: 50%;
 }
 }
-
 </style>
