@@ -1,6 +1,6 @@
 <template>
   <v-app>
-    <headerContent class="text-center mx-lg-16 my-lg-10 my-5"/>
+    <headerContent class="mx-lg-16 my-5 my-lg-10 px-5 pt-5"/>
     <v-main>
       <mainContent class="mx-auto mb-10"/>
     </v-main>
@@ -32,5 +32,8 @@ export default {
 
 .v-data-table > .v-data-table__wrapper > table > tbody > tr > td {
    font-size: 0.75rem !important;
+   margin: 0;
+   padding-right: 0;
+   line-height: 1;
 }
 </style>

@@ -32,7 +32,7 @@ let i = 1
 const jobs = []; 
 
 while (i < 76) {
-  let job = {name: `job ${i}`, company: `company ${i}`, salary: '$ salary', link:'https://google.com'}
+  let job = {name: `job really long job title ${i}`, company: `company really long company name ${i}`, salary: '$ salary', link:'https://google.com'}
   jobs.push(job);
   i++;
 }
