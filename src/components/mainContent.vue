@@ -2,23 +2,25 @@
   <v-card id="contentBox" fill-height>
     <v-card-title>
       <v-text-field
-      v-model="search"
-      append-icon="mdi-magnify"
-      label="Search"
-      single-line
-      hide-details
-      ></v-text-field>
+        v-model="search"
+        append-icon="mdi-magnify"
+        label="Search"
+        single-line
+        hide-details
+        >
+      </v-text-field>
     </v-card-title>
     <v-data-table
-    :headers="headers"
-    :items="jobs"
-    :search="search"
-    disable-pagination
-    disable-sort
-    hide-default-footer
-    mobile-breakpoint="0"
-    dense 
-    id="myTable">
+      :headers="headers"
+      :items="jobs"
+      :search="search"
+      disable-pagination
+      disable-sort
+      hide-default-footer
+      mobile-breakpoint="0"
+      dense 
+      id="myTable"
+      >
       <template v-slot:[`item.name`]="{ item }">
         <a :href="item.link" class="links" target="_blank" rel="noopener noreferrer">{{ item.name }}</a>
       </template>
