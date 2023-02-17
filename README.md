@@ -1,5 +1,5 @@
 # briefjcb-vue
-A site to keep track of jobs on jcb made using Vue & Vuetify.
+A site to keep track of jobs on jcb made using Vue & Vuetify which can be found at https://vue-briefjcb.web.app
 
 ## Project setup
 ```
