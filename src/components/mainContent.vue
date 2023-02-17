@@ -52,7 +52,7 @@ export default {
     fetchJobs: function () {
       for (let i = 1; i < 76; i++) {
         let job = {name: `job really long job title ${i}`, company: `company really long company name ${i}`, salary: '$ salary', link:'https://google.com'}
-        this.jobs.push(job);
+        this.jobs.push(job)
       }
     }
   },
