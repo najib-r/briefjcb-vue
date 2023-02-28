@@ -55,6 +55,17 @@ export default {
         this.jobs.push(job)
       }
     }
+    // fetchJobs: function () {
+    //   let vm = this;
+    //   fetch("http://localhost:3000/jobs.json/")
+    //     .then((res) => (res.json()))
+    //     .then(function (data) {
+    //       for (let i = 0; i < data.length; i++) {
+    //         let job = {name: data[i].title, company: data[i].company, salary: data[i].salary, link: data[i].link}
+    //         vm.jobs.push(job)
+    //       }
+    //     })
+    // }
   },
   created () {
     this.fetchJobs()
