@@ -23,7 +23,7 @@
       mobile-breakpoint="300"
       dense 
       id="myTable"
-      >
+    >
       <template v-slot:[`item.name`]="{ item }">
         <a :href="item.link" class="links" target="_blank" rel="noopener noreferrer">{{ item.name }}</a>
       </template>
@@ -101,14 +101,4 @@ a:visited {
   width: 95%;
   max-width: 600px;
 }
-
-#myTable {
-  width: 100%;
-}
-
-/* @media only screen and (min-width: 768px) {
-#contentBox {
-  width: 50%;
-}
-} */
 </style>
