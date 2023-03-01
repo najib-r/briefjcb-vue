@@ -7,6 +7,8 @@
         label="Search"
         single-line
         hide-details
+        dense
+        clearable
         >
       </v-text-field>
     </v-card-title>
@@ -14,10 +16,11 @@
       :headers="headers"
       :items="jobs"
       :search="search"
+      :loading="!jobs.length"
       disable-pagination
       disable-sort
       hide-default-footer
-      mobile-breakpoint="0"
+      mobile-breakpoint="300"
       dense 
       id="myTable"
       >
@@ -51,7 +54,7 @@ export default {
   methods: {
     fetchJobs: function () {
       for (let i = 1; i < 76; i++) {
-        let job = {name: `job really long job title ${i}`, company: `company really long company name ${i}`, salary: '$ salary', link:'https://google.com'}
+        let job = {name: `job really long job title ${i}`, company: `company really long company name ${i}`, salary: '$ 350-400', link:'https://google.com'}
         this.jobs.push(job)
       }
     }
@@ -96,12 +99,16 @@ a:visited {
 
 #contentBox {
   width: 95%;
-  max-width: 900px;
+  max-width: 600px;
 }
 
-@media only screen and (min-width: 768px) {
+#myTable {
+  width: 100%;
+}
+
+/* @media only screen and (min-width: 768px) {
 #contentBox {
   width: 50%;
 }
-}
+} */
 </style>

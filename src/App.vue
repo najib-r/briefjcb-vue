@@ -1,8 +1,8 @@
 <template>
   <v-app>
-    <headerContent class="mx-lg-auto my-5 my-lg-10 px-5 pt-5"/>
+    <headerContent class="mx-lg-auto mt-md-5 mt-lg-10 px-5 pt-5"/>
     <v-main>
-      <mainContent class="mx-auto mb-10"/>
+      <mainContent class="mx-auto"/>
     </v-main>
   </v-app>
 </template>
@@ -46,7 +46,7 @@ export default {
         tbody {
           tr {
             td {
-              font-size: 0.75rem !important;
+              font-size: calc(0.53rem + 0.55vmin) !important;
               margin: 0;
               padding-right: 0;
               line-height: 1;
