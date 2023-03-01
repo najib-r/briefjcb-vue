@@ -2,7 +2,7 @@
   <v-app>
     <headerContent class="mx-lg-auto mt-md-5 mt-lg-10 px-5 pt-5"/>
     <v-main>
-      <mainContent class="mx-auto"/>
+      <mainContent class="mx-auto mb-5 mb-md-10 mb-lg-15"/>
     </v-main>
   </v-app>
 </template>
