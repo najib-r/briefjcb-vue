@@ -52,23 +52,23 @@ export default {
     }
   },
   methods: {
-    fetchJobs: function () {
-      for (let i = 1; i < 76; i++) {
-        let job = {name: `job really long job title ${i}`, company: `company really long company name ${i}`, salary: '$ 350-400', link:'https://google.com'}
-        this.jobs.push(job)
-      }
-    }
     // fetchJobs: function () {
-    //   let vm = this;
-    //   fetch("http://localhost:3000/jobs.json/")
-    //     .then((res) => (res.json()))
-    //     .then(function (data) {
-    //       for (let i = 0; i < data.length; i++) {
-    //         let job = {name: data[i].title, company: data[i].company, salary: data[i].salary, link: data[i].link}
-    //         vm.jobs.push(job)
-    //       }
-    //     })
+    //   for (let i = 1; i < 76; i++) {
+    //     let job = {name: `job really long job title ${i}`, company: `company really long company name ${i}`, salary: '$ 350-400', link:'https://google.com'}
+    //     this.jobs.push(job)
+    //   }
     // }
+    fetchJobs: function () {
+      let vm = this;
+      fetch("https://briefjcb-api.onrender.com/jobs.json")
+        .then((res) => (res.json()))
+        .then(function (data) {
+          for (let i = 0; i < data.length; i++) {
+            let job = {name: data[i].title, company: data[i].company, salary: data[i].salary, link: data[i].link}
+            vm.jobs.push(job)
+          }
+        })
+    }
   },
   created () {
     this.fetchJobs()
